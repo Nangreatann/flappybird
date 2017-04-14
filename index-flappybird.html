@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本模板</title>
+</head>
+<body>
+<!--结构-->
+<div id="fly"></div>
+<!--<canvas id="cv"></canvas>-->
+
+
+<!--引入全局对象文件-->
+<script src="js/Fly.js"></script>
+<!--引入小鸟对象文件-->
+<script src="js/bird.js"></script>
+<!--引入天空对象文件-->
+<script src="js/sky.js"></script>
+<!--引入管道对象文件-->
+<script src="js/pipe.js"></script>
+<!--引入陆地对象文件-->
+<script src="js/land.js"></script>
+<!--引入游戏控制文件-->
+<script src="js/games.js"></script>
+<script>
+    //工厂模式
+    //屏蔽了创建对象的过程，没有工厂模式的时候，是使用new构造函数来创建对象，但是每次都是用new，会比较繁琐，也没有达到同意处理所有实例对象的目的
+    //所以我们使用工厂模式来改造创建对象的过程！
+
+
+    var g=Fly.factory('Game','fly');
+    g.startGame();
+
+</script>
+</body>
+</html>
